@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de Aromas&Recetas">
+    <title>Aromas&Recetas-Formulario</title>
+    <link rel="stylesheet" href="../style/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+ 
+</head>
+<body>
+            <!-- NOSCRIPT -->
+            <noscript>
+                <div style="background-color: white; color: black; padding: 10px; text-align: center;">
+                    Parece que JavaScript no está habilitado en tu navegador. Algunas características de esta página no funcionarán correctamente sin JavaScript.
+                </div>
+            </noscript>
+            <div class="container">
+                <!-- REGISTRARSE -->
+                <div class="form-container sign-up">
+                    <form id="formup" action="../public/registrar.php" method="post"> <!--CONEXION a registrar.php-->
+                        <h2>Registrarse</h2>
+                        <div class="form-group">
+                            <input id="nameup" name="nombre">
+                            <i class='bx bxs-user'></i>
+                            <label >Nombre</label>
+                        </div>
+                        <div class="form-group">
+                            <input id="emailup" name="email">
+                            <i class='bx bxs-envelope'></i>
+                            <label >Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input id="passwordup" name="contrasena" type="password">
+                            <i class='bx bxs-lock'></i>
+                            <label >Contraseña</label>
+                        </div>
+                       
+                        <div id="error-msg" style="display: none; background-color: white; color: black; padding: 10px; text-align: center;"></div>
+                            <div class="btn-div">
+                                <button type="submit" class="btn" id="btnRegistrarse">Registrarse</button>
+                            </div>
+                            <div class="btn-div">
+                                <button type="reset" class="btn">Resetear</button>
+                           
+                        <div class="link">
+                            <p>¿Tienes cuenta?
+                                <a href="#" class="signin-link">Iniciar Sesión</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+                <!-- INICIAR SESIÓN -->
+                <div class="form-container sign-in">
+                            <form action="../public/login.php" method="post"> <!--CONEXION a login.php-->
+                                <h2>Iniciar Sesión</h2>
+                                <div class="form-group">
+                                    <input id="nameini" name="email"> 
+                                    <i class='bx bxs-user'></i>
+                                    <label for="">Correo electrónico</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="passini" name="contrasena" type="password">
+                                    <i class='bx bxs-lock'></i>
+                                    <label for="">Contraseña</label>
+                                </div>
+                                <div class="forgot-pass">
+                                    <a href="#" class="text-forgot">¿Se te olvidó la contraseña?</a></div>
+                                    <div id="error-msg2" style="display: none; background-color: white; color: black; padding: 10px; text-align: center;"></div>
+                                    <div class="btn-div">
+                                        <button type="submit" class="btn" id="btnIni">Iniciar Sesión</button>
+                                    </div>
+                                    <div class="btn-div">
+                                        <button type="reset" class="btn">Resetear</button>
+                                    </div>
+                                <div class="link">
+                                    <p>¿No tienes cuenta?
+                                        <a href="#" class="signup-link">Registrarse</a>
+                                    </p>
+                                </div>
+                            </form>
+                </div>
+
+                
+    </div>
+
+
+
+
+
+        <!--Scroll top-->
+        <a href="../index.html" class="scroll">
+            <i class='bx bxs-home-heart bx-tada' ></i>
+        </a>
+    
+
+    <!--LOADER-->
+    <div class="loader-container">
+        <i class='bx bx-user-circle bx-tada' ></i>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- CONEXIÓN AL JS -->
+    <script src="../script/form.js"></script>
+</body>
+</html>

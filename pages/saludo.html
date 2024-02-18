@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de Aromas&Recetas">
+    <title>Aromas&Recetas-LocalStorage</title>
+    <link rel="stylesheet" href="../style/saludos.css">
+    <!--BOX ICONS-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+            <!-- NOSCRIPT -->
+            <noscript>
+                <div style="background-color: white; color: black; padding: 10px; text-align: center;">
+                    Parece que JavaScript no está habilitado en tu navegador. Algunas características de esta página no funcionarán correctamente sin JavaScript.
+                </div>
+            </noscript>
+        <!--HEADER-->
+        <header>
+            <a href="#" class="logo">
+                <i class='bx bxs-home-heart bx-tada' ></i>
+                Aromas&Recetas
+            </a>
+    
+            <ul class="navlist">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="/pages/recetas.html">Recetas</a></li>
+                <li><a href="/pages/tienda.html">Tienda</a></li>
+                <li><a href="/pages/galeria.html">Galería</a></li>
+                <li><a href="#" class="active">LocalStorage</a></li>
+                <li><a href="/pages/form.html">Formulario</a></li>
+            </ul>
+    
+            <div class="nav-icons">
+                <a href="#"><i class='bx bx-search-alt' ></i></a>
+                <a href="#"><i class='bx bx-cart-alt'></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+
+
+    <!--TIENDA-->
+    <section class="shop2" id="shop">
+        <div class="middle-text">
+            <h4>Bienvenido a Aromas y Recetas</h4>
+            <div id="greetingMessage"></div>
+            <div class="btn-div">
+                <button id="clearPreferences" class="btn-1">Borrar Preferencias</button>
+            </div>
+        </div>
+        
+        
+ 
+     </section>
+
+     <!-- JQUERY -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script>
+         $(document).ready(function() {
+             const username = localStorage.getItem("username");
+             const backgroundColor = localStorage.getItem("backgroundColor");
+             const fontColor = localStorage.getItem("fontColor");
+     
+             if (username && backgroundColor && fontColor) {
+                 $("body").css("background-color", backgroundColor);
+                 $("body").css("color", fontColor);
+                 $("#greetingMessage").text(`Hola, ${username}!`);
+             } else {
+                 window.location.href = "localstorage.html";
+             }
+     
+             $("#clearPreferences").click(function() {
+                 localStorage.clear();
+                 window.location.href = "localstorage.html";
+             });
+         });
+     </script>
+
+
+
+            <!--Contact-->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+           <div class="contact-text">
+                <h2>Contáctanos</h2>
+                <p>
+                    Para contactarnos, no dudes en utilizar la información proporcionada a continuación.
+                    Puedes escribirnos a nuestra dirección de correo electrónico o llamarnos.
+                    Además, te invitamos a seguirnos en nuestras redes sociales para mantenerte al tanto de nuestras últimas novedades y actualizaciones.
+                   
+                </p>
+                <div class="social">
+                    <a href="#" class="clr"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#"><i class='bx bx-envelope'></i></a>
+                </div>
+           </div>
+
+           <div class="details">
+                <!--Ubicación-->
+                <div class="main-d">
+                    <a href="#"><i class='bx bx-location-plus'></i>Las Palmas de Gran Canaria</a>
+                </div>
+
+                <!--Correo-->
+                <div class="main-d">
+                    <a href="#"><i class='bx bx-envelope'></i></i>Aromas&Recetas@gmail.com</i></a>
+                </div>
+
+                <!--Telefono-->
+                <div class="main-d">
+                    <a href="#"><i class='bx bx-phone-call'></i>+34 726 15 43 19</i></a>
+                </div>
+
+           </div>
+        </div>
+    </section>
+
+
+    <!--Scroll top-->
+    <a href="#" class="scroll">
+        <i class='bx bxs-pizza bx-tada' ></i>
+    </a>
+        
+    <script src="https://unpkg.com/scrollreveal"></script>
+<script src="/script/galeria.js"></script>
+</body>
+</html>

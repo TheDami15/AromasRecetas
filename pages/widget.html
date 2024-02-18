@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Búsqueda</title>
+  <style>
+    body{
+        background: #111111;;
+    }
+    /* Estilos opcionales para mejorar la apariencia */
+    #search-container {
+      text-align: center;
+      margin-top: 50px;
+      background: #111111;
+    }
+
+    #search-input {
+      padding: 10px;
+      width: 200px;
+    }
+
+    #search-button {
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Buscar...">
+    <button id="search-button">Buscar</button>
+  </div>
+
+  <div id="search-results">
+        </a>
+  </div>
+
+  <script>
+    // Función para manejar la búsqueda
+    function buscar() {
+      // Obtener el valor del input de búsqueda
+      var searchTerm = document.getElementById('search-input').value;
+      // En este ejemplo, simplemente mostramos un mensaje en la consola
+      alert('Búsqueda realizada:'+ searchTerm);
+
+    }
+
+    // Agregar un event listener al botón de búsqueda
+    document.getElementById('search-button').addEventListener('click', buscar);
+    
+    // También puedes manejar la búsqueda cuando se presiona Enter en el campo de búsqueda
+    document.getElementById('search-input').addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        buscar();
+      }
+    });
+  </script>
+
+
+</body>
+</html>
