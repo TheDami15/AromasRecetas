@@ -169,6 +169,13 @@ color: #ffa968;
     transition: all .5s ease;
     border-radius: .5rem;
 }
+.container .form-container form .link  #indexdb {
+    color: #be0e0e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .5s ease;
+    border-radius: .5rem;
+}
 
 .container .form-container form .link a:hover {
     box-shadow: 0 0 2rem ;

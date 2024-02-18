@@ -1,39 +1,30 @@
-/*MÉTODO EN JS PARA EL HEADER DEL MENÚ*/
-const header = document.querySelector("header");
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener referencias a los elementos relevantes
+    const menuIcon = document.getElementById("menu-icon");
+    const navlist = document.querySelector('.navlist');
 
-window.addEventListener("scroll", function() {
-    header.classList.toggle("sticky", this.window.scrollY > 80);
+    // Manejar el clic en el ícono del menú
+    menuIcon.addEventListener("click", function() {
+        // Realizar la solicitud Ajax para obtener el menú
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Actualizar el contenido del menú con la respuesta del servidor
+                    navlist.innerHTML = xhr.responseText;
+                } else {
+                    console.error("Error al cargar el menú");
+                }
+            }
+        };
+        // Hacer la solicitud GET al servidor
+        xhr.open("GET", "../pages/form.html", true);
+        xhr.send();
+    });
+
+    // Manejar el desplazamiento de la ventana
+    window.onscroll = () => {
+        menuIcon.classList.remove('bx-x');
+        navlist.classList.remove('open');
+    }
 });
-
-// MENU
-let menu = document.querySelector('#menu-icon');
-let navlist = document.querySelector('.navlist');
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navlist.classList.toggle('open');
-};
-
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navlist.classList.remove('open');
-}
-
-//SCROLL
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '85px',
-    duration: 2200,
-    reset: true
-})
-
-
-sr.reveal ('.about-img',{});
-sr.reveal ('.about-text',{delay:200});
-
-sr.reveal ('.middle-text',{});
-sr.reveal ('.row-btn,.shop-content',{delay:200});
-
-sr.reveal ('.review-content,.contact',{delay:200});
-
-
-
