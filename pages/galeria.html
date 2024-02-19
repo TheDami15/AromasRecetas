@@ -13,6 +13,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- JQUERY SLIDER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        .slider {
+          width: 40%;
+          height: 40%;
+          margin: 50px auto;
+        }
+        .slider img {
+            size: 20px;
+          width: 40%;
+        }
+      </style>
 </head>
 <body>
             <!-- NOSCRIPT -->
@@ -51,6 +65,30 @@
          <h4>Nuestra Galería</h4>
          <h2>Las ilustraciones de todos los Productos</h2>
         </div>
+
+        <div class="slider">
+            <img class="img-slider" src="../img/index/02.png" alt="Imagen 1">
+            <img class="img-slider" src="../img/index/Croffle.png" alt="Imagen 2">
+            <img class="img-slider" src="../img/index/Espagueti.png" alt="Imagen 3">
+            <img class="img-slider" src="../img/index/Gofres.png" alt="Imagen 4">
+            <img class="img-slider" src="../img/index/Hamburguesa.png" alt="Imagen 5">
+            <img class="img-slider" src="../img/index/Pancake.png" alt="Imagen 6">
+            <img class="img-slider" src="../img/index/Sandwich.png" alt="Imagen 7">
+            <img class="img-slider" src="../img/index/Tienda/Almendras.png" alt="Imagen 8">
+          </div>
+          
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+          <script>
+            $(document).ready(function(){
+              $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 3000, // Cambia la imagen cada 2 segundos
+                arrows: false,
+                dots: true
+              });
+            });
+          </script>
         
         <div class="shop-content">
              <div class="row">

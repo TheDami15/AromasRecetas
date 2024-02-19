@@ -28,12 +28,16 @@ const sr = ScrollReveal({
 
 
 sr.reveal('.container', { delay: 400 });
-
+sr.reveal('.slider, .img-slider', {});
 sr.reveal('.middle-text', {});
 sr.reveal('.row-btn,.shop-content', { delay: 200 });
 
 sr.reveal('.review-content,.contact', { delay: 200 });
 sr.reveal('.video', { delay: 200 });
+
+
+
+
 
 // Obtener el elemento de video
 document.addEventListener("DOMContentLoaded", function () {
