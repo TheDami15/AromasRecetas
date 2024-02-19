@@ -28,7 +28,7 @@ const sr = ScrollReveal({
 
 
 sr.reveal('.container', { delay: 400 });
-sr.reveal('.slider, .img-slider', {});
+sr.reveal('.slider', {});
 sr.reveal('.middle-text', {});
 sr.reveal('.row-btn,.shop-content', { delay: 200 });
 
